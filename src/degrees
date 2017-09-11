@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# cat $1 | awk '{printf("%d\n",$1);printf("%d\n",$2)}' | sort -T. -S2g | uniq -c|awk '{print($2,$1)}'
+cat $1 | sort -T. -S2g | uniq -c|awk '{print($2,$1)}'

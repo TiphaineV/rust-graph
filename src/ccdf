@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cat $1 | sort -T. -S1g -gk1,1 -r | awk '{sum+=$2; print($1,sum);}' | sort -gk1,1 | awk '{if(NR==1){max=$2}print($1,$2/max)}'
